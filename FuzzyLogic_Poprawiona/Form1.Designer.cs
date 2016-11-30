@@ -131,7 +131,8 @@
             this.pictureBoxPiecyk.Image = global::FuzzyLogic_Poprawiona.Properties.Resources.piec_off;
             this.pictureBoxPiecyk.Location = new System.Drawing.Point(186, 249);
             this.pictureBoxPiecyk.Name = "pictureBoxPiecyk";
-            this.pictureBoxPiecyk.Size = new System.Drawing.Size(180, 130);
+            this.pictureBoxPiecyk.Size = new System.Drawing.Size(171, 130);
+            this.pictureBoxPiecyk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxPiecyk.TabIndex = 2;
             this.pictureBoxPiecyk.TabStop = false;
             // 
