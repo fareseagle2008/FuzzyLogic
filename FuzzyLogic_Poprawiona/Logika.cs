@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FuzzyLogic_Poprawiona
 {
@@ -442,6 +443,43 @@ namespace FuzzyLogic_Poprawiona
         public double OdswiezTempPokoju()
         {
             return piecyk + klima + wplywNaTempWnetrza;
+        }
+
+        public void OdswiezImg(PictureBox klimapicture, PictureBox piecpicture,PictureBox typ, Label tempWew)
+        {
+          if(klima < 0)
+            {
+                klimapicture.Image = Properties.Resources.klima_on;
+                klimapicture.Invalidate();
+            }else if(klima == 0)
+            {
+                klimapicture.Image = Properties.Resources.klima_on;
+                klimapicture.Invalidate();
+            }
+           if (piecyk == 0)
+            {
+                piecpicture.Image = Properties.Resources.piec_off;
+                klimapicture.Invalidate();
+            }else if (piecyk > 0)
+            {
+                piecpicture.Image = Properties.Resources.fire;
+                klimapicture.Invalidate();
+            }
+
+            if (Double.Parse(tempWew.Text) < 24)
+            {
+                typ.Image = Properties.Resources.typek_cold;
+                typ.Invalidate();
+            }else if ((Double.Parse(tempWew.Text) >= 24) && (Double.Parse(tempWew.Text) <= 28))
+            {
+                typ.Image = Properties.Resources.typek_norm;
+                typ.Invalidate();
+            }else if (Double.Parse(tempWew.Text) > 28)
+            {
+                typ.Image = Properties.Resources.typek_warm;
+                typ.Invalidate();
+            }
+
         }
     }
 }

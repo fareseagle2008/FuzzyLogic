@@ -14,7 +14,7 @@ namespace FuzzyLogic_Poprawiona
         {
             lock (syncLock)
             { // synchronize
-                return getrandom.NextDouble() * (max-min)+min;
+                return Math.Round(getrandom.NextDouble() * (max-min)+min,2);
             }
         }
     }
