@@ -12,22 +12,30 @@ namespace FuzzyLogic_Poprawiona
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
             timerTemperatury.Start();
-            labelTempWnetrze.Text = Randomizer.GetRandomNumber(5, 50).ToString("#.00");
+            labelTempWnetrze.Text = Randomizer.GetRandomNumber(5, 30).ToString("#.00");
             labelTempDwor.Text = Randomizer.GetRandomNumber(-20, 40).ToString("#.00");
+            
         }
 
 
-        int czas = 0;
+       
         private void timerTemperatury_Tick(object sender, EventArgs e)
         {
+            
             ZmianaPoryDnia(czas);
+            ++czas;
+            if (czas == 37) czas = 0;
             Logika logika = new Logika(Convert.ToDouble(labelTempWnetrze.Text), Convert.ToDouble(labelTempDwor.Text));
             logika.Reguly();
-            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + logika.OdswiezTempPokoju()).ToString();
+            logika.OdswiezImg(pictureBoxKlima, pictureBoxPiecyk,pictureBox1,labelTempWnetrze);
+            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + logika.OdswiezTempPokoju()).ToString("#.00");
+            
+            
         }
 
 
@@ -47,25 +55,21 @@ namespace FuzzyLogic_Poprawiona
                 oknoOtwarte = false;
             }
         }
-        private int ZmianaPoryDnia(int czas)
+
+        int czas = 0;
+        private void ZmianaPoryDnia(int czas)
         {
-            if (czas <= 100)
-            {
-                pictureBoxPoraDnia.Image = Properties.Resources.dzien;
-                pictureBoxPoraDnia.Invalidate();
-            }
+
+            
+            if (czas <= 20)
+             {
+               pictureBoxPoraDnia.Image = Properties.Resources.dzien;
+               pictureBoxPoraDnia.Invalidate();
+             }
             else
             {
                 pictureBoxPoraDnia.Image = Properties.Resources.noc;
                 pictureBoxPoraDnia.Invalidate();
-            }
-            if (czas == 150)
-            {
-                return czas = 0;
-            }
-            else
-            {
-                return ++czas;
             }
         }
 
@@ -81,10 +85,19 @@ namespace FuzzyLogic_Poprawiona
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("Nie rob se jaj");
+                    if(forma.minRandomek.Text == "")
+                       MessageBox.Show("Pole temperatura minimalna jest puste");
+                    else if (forma.maxRandomek.Text == "")
+                       MessageBox.Show("Pole temperatura maksymalna jest puste");
+                    else
+                        MessageBox.Show("Error");
+                    forma.ShowDialog();
+
                 }
             }
             
         }
+
+        
     }
 }

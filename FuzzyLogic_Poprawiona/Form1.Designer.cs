@@ -33,21 +33,21 @@
             this.timerTemperatury = new System.Windows.Forms.Timer(this.components);
             this.panelDwor = new System.Windows.Forms.Panel();
             this.labelTempDwor = new System.Windows.Forms.Label();
+            this.pictureBoxPoraDnia = new System.Windows.Forms.PictureBox();
             this.panelWnetrze = new System.Windows.Forms.Panel();
+            this.buttonNewRandom = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelTempWnetrze = new System.Windows.Forms.Label();
             this.pictureBoxPiecyk = new System.Windows.Forms.PictureBox();
             this.pictureBoxKlima = new System.Windows.Forms.PictureBox();
             this.pictureBoxOkno = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPoraDnia = new System.Windows.Forms.PictureBox();
-            this.buttonNewRandom = new System.Windows.Forms.Button();
             this.panelDwor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoraDnia)).BeginInit();
             this.panelWnetrze.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiecyk)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKlima)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOkno)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoraDnia)).BeginInit();
             this.SuspendLayout();
             // 
             // timerTemperatury
@@ -73,6 +73,15 @@
             this.labelTempDwor.TabIndex = 2;
             this.labelTempDwor.Text = "labelTempDwor";
             // 
+            // pictureBoxPoraDnia
+            // 
+            this.pictureBoxPoraDnia.Image = global::FuzzyLogic_Poprawiona.Properties.Resources.dzien;
+            this.pictureBoxPoraDnia.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxPoraDnia.Name = "pictureBoxPoraDnia";
+            this.pictureBoxPoraDnia.Size = new System.Drawing.Size(244, 499);
+            this.pictureBoxPoraDnia.TabIndex = 3;
+            this.pictureBoxPoraDnia.TabStop = false;
+            // 
             // panelWnetrze
             // 
             this.panelWnetrze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelWnetrze.BackgroundImage")));
@@ -86,6 +95,16 @@
             this.panelWnetrze.Name = "panelWnetrze";
             this.panelWnetrze.Size = new System.Drawing.Size(601, 502);
             this.panelWnetrze.TabIndex = 0;
+            // 
+            // buttonNewRandom
+            // 
+            this.buttonNewRandom.Location = new System.Drawing.Point(206, 82);
+            this.buttonNewRandom.Name = "buttonNewRandom";
+            this.buttonNewRandom.Size = new System.Drawing.Size(160, 23);
+            this.buttonNewRandom.TabIndex = 5;
+            this.buttonNewRandom.Text = "Losuj nowa Temperature";
+            this.buttonNewRandom.UseVisualStyleBackColor = true;
+            this.buttonNewRandom.Click += new System.EventHandler(this.buttonNewRandom_Click);
             // 
             // pictureBox1
             // 
@@ -135,25 +154,6 @@
             this.pictureBoxOkno.TabStop = false;
             this.pictureBoxOkno.Click += new System.EventHandler(this.pictureBoxOkno_Click);
             // 
-            // pictureBoxPoraDnia
-            // 
-            this.pictureBoxPoraDnia.Image = global::FuzzyLogic_Poprawiona.Properties.Resources.dzien;
-            this.pictureBoxPoraDnia.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxPoraDnia.Name = "pictureBoxPoraDnia";
-            this.pictureBoxPoraDnia.Size = new System.Drawing.Size(244, 499);
-            this.pictureBoxPoraDnia.TabIndex = 3;
-            this.pictureBoxPoraDnia.TabStop = false;
-            // 
-            // buttonNewRandom
-            // 
-            this.buttonNewRandom.Location = new System.Drawing.Point(206, 82);
-            this.buttonNewRandom.Name = "buttonNewRandom";
-            this.buttonNewRandom.Size = new System.Drawing.Size(160, 23);
-            this.buttonNewRandom.TabIndex = 5;
-            this.buttonNewRandom.Text = "Losuj nowa Temperature";
-            this.buttonNewRandom.UseVisualStyleBackColor = true;
-            this.buttonNewRandom.Click += new System.EventHandler(this.buttonNewRandom_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,13 +168,13 @@
             this.Text = "FuzzyLogic";
             this.panelDwor.ResumeLayout(false);
             this.panelDwor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoraDnia)).EndInit();
             this.panelWnetrze.ResumeLayout(false);
             this.panelWnetrze.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPiecyk)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKlima)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOkno)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPoraDnia)).EndInit();
             this.ResumeLayout(false);
 
         }

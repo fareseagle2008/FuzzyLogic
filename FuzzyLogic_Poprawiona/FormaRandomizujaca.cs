@@ -12,12 +12,16 @@ namespace FuzzyLogic_Poprawiona
 {
     public partial class FormaRandomizujaca : Form
     {
+        public TextBox minRandomek { get; set; }
+        public TextBox maxRandomek { get; set; }
         public FormaRandomizujaca()
         {
             InitializeComponent();
             comboBoxWyborTemperatury.SelectedIndex = 0;
+            this.minRandomek = textBoxMin;
+            this.maxRandomek = textBoxMax;
         }
-        bool correct = false;
+        
         public string NowyRandom(Label temperaturaWnetrza, Label temperaturaDworu)
         {
 
@@ -29,6 +33,8 @@ namespace FuzzyLogic_Poprawiona
             {
                 return temperaturaDworu.Text = Randomizer.GetRandomNumber(Convert.ToDouble(textBoxMin.Text), Convert.ToDouble(textBoxMax.Text)).ToString();
             }
-        }        
+        }
+
+               
     }
 }
