@@ -14,9 +14,13 @@ namespace FuzzyLogic_Poprawiona
         double[] offsetDworOknoOt = new double[3];
         double[] offsetDworOknoZam = new double[3];
         
-        static int piecyk = 0;
-        static int klima = 0;
-        static int wplywNaTempWnetrza = 0;
+        static  int piecyk = 0;
+        static  int klima = 0;
+        static  int wplywNaTempWnetrza = 0;
+
+        public int kl { get; set; }
+        public int pc { get; set; }
+        public int wp { get; set; }
         public Logika(double TemperaturaWnetrza, double TemperaturaDwor)
         {
             Najzimniej(TemperaturaWnetrza);
@@ -442,6 +446,9 @@ namespace FuzzyLogic_Poprawiona
 
         public double OdswiezTempPokoju()
         {
+            pc = piecyk;
+            kl = klima;
+            wp = wplywNaTempWnetrza;
             return piecyk + klima + wplywNaTempWnetrza;
         }
 

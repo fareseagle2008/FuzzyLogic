@@ -34,6 +34,9 @@ namespace FuzzyLogic_Poprawiona
             logika.Reguly();
             logika.OdswiezImg(pictureBoxKlima, pictureBoxPiecyk,pictureBox1,labelTempWnetrze);
             labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + logika.OdswiezTempPokoju()).ToString("#.00");
+            mocPiec.Text = logika.pc.ToString();
+            mocKlima.Text = logika.kl.ToString();
+            mocSciana.Text = logika.wp.ToString();
             
             
         }
