@@ -35,6 +35,7 @@
             this.labelTempDwor = new System.Windows.Forms.Label();
             this.pictureBoxPoraDnia = new System.Windows.Forms.PictureBox();
             this.panelWnetrze = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.mocSciana = new System.Windows.Forms.Label();
             this.mocKlima = new System.Windows.Forms.Label();
             this.mocPiec = new System.Windows.Forms.Label();
@@ -88,6 +89,7 @@
             // panelWnetrze
             // 
             this.panelWnetrze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelWnetrze.BackgroundImage")));
+            this.panelWnetrze.Controls.Add(this.label1);
             this.panelWnetrze.Controls.Add(this.mocSciana);
             this.panelWnetrze.Controls.Add(this.mocKlima);
             this.panelWnetrze.Controls.Add(this.mocPiec);
@@ -102,11 +104,21 @@
             this.panelWnetrze.Size = new System.Drawing.Size(601, 502);
             this.panelWnetrze.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(551, 483);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "lumeny";
+            // 
             // mocSciana
             // 
             this.mocSciana.AutoSize = true;
             this.mocSciana.BackColor = System.Drawing.Color.Transparent;
-            this.mocSciana.Location = new System.Drawing.Point(518, 32);
+            this.mocSciana.Location = new System.Drawing.Point(518, 10);
             this.mocSciana.Name = "mocSciana";
             this.mocSciana.Size = new System.Drawing.Size(73, 13);
             this.mocSciana.TabIndex = 8;
@@ -116,7 +128,7 @@
             // 
             this.mocKlima.AutoSize = true;
             this.mocKlima.BackColor = System.Drawing.Color.Transparent;
-            this.mocKlima.Location = new System.Drawing.Point(446, 145);
+            this.mocKlima.Location = new System.Drawing.Point(470, 145);
             this.mocKlima.Name = "mocKlima";
             this.mocKlima.Size = new System.Drawing.Size(52, 13);
             this.mocKlima.TabIndex = 7;
@@ -126,7 +138,7 @@
             // 
             this.mocPiec.AutoSize = true;
             this.mocPiec.BackColor = System.Drawing.Color.Transparent;
-            this.mocPiec.Location = new System.Drawing.Point(245, 216);
+            this.mocPiec.Location = new System.Drawing.Point(266, 233);
             this.mocPiec.Name = "mocPiec";
             this.mocPiec.Size = new System.Drawing.Size(48, 13);
             this.mocPiec.TabIndex = 6;
@@ -232,6 +244,7 @@
         private System.Windows.Forms.Label mocSciana;
         private System.Windows.Forms.Label mocKlima;
         private System.Windows.Forms.Label mocPiec;
+        private System.Windows.Forms.Label label1;
     }
 }
 
