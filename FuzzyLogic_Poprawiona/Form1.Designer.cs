@@ -32,10 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.timerTemperatury = new System.Windows.Forms.Timer(this.components);
             this.panelDwor = new System.Windows.Forms.Panel();
+            this.buttonGetTemp = new System.Windows.Forms.Button();
             this.labelTempDwor = new System.Windows.Forms.Label();
             this.pictureBoxPoraDnia = new System.Windows.Forms.PictureBox();
             this.panelWnetrze = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelLumeny = new System.Windows.Forms.Label();
             this.mocSciana = new System.Windows.Forms.Label();
             this.mocKlima = new System.Windows.Forms.Label();
             this.mocPiec = new System.Windows.Forms.Label();
@@ -61,12 +62,23 @@
             // 
             // panelDwor
             // 
+            this.panelDwor.Controls.Add(this.buttonGetTemp);
             this.panelDwor.Controls.Add(this.labelTempDwor);
             this.panelDwor.Controls.Add(this.pictureBoxPoraDnia);
             this.panelDwor.Location = new System.Drawing.Point(595, 0);
             this.panelDwor.Name = "panelDwor";
             this.panelDwor.Size = new System.Drawing.Size(244, 502);
             this.panelDwor.TabIndex = 1;
+            // 
+            // buttonGetTemp
+            // 
+            this.buttonGetTemp.Location = new System.Drawing.Point(123, 357);
+            this.buttonGetTemp.Name = "buttonGetTemp";
+            this.buttonGetTemp.Size = new System.Drawing.Size(108, 36);
+            this.buttonGetTemp.TabIndex = 10;
+            this.buttonGetTemp.Text = "Pobierz temperature";
+            this.buttonGetTemp.UseVisualStyleBackColor = true;
+            this.buttonGetTemp.Click += new System.EventHandler(this.buttonGetTemp_Click);
             // 
             // labelTempDwor
             // 
@@ -89,7 +101,7 @@
             // panelWnetrze
             // 
             this.panelWnetrze.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelWnetrze.BackgroundImage")));
-            this.panelWnetrze.Controls.Add(this.label1);
+            this.panelWnetrze.Controls.Add(this.labelLumeny);
             this.panelWnetrze.Controls.Add(this.mocSciana);
             this.panelWnetrze.Controls.Add(this.mocKlima);
             this.panelWnetrze.Controls.Add(this.mocPiec);
@@ -104,15 +116,15 @@
             this.panelWnetrze.Size = new System.Drawing.Size(601, 502);
             this.panelWnetrze.TabIndex = 0;
             // 
-            // label1
+            // labelLumeny
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(551, 483);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "lumeny";
+            this.labelLumeny.AutoSize = true;
+            this.labelLumeny.BackColor = System.Drawing.Color.Transparent;
+            this.labelLumeny.Location = new System.Drawing.Point(540, 474);
+            this.labelLumeny.Name = "labelLumeny";
+            this.labelLumeny.Size = new System.Drawing.Size(40, 13);
+            this.labelLumeny.TabIndex = 9;
+            this.labelLumeny.Text = "lumeny";
             // 
             // mocSciana
             // 
@@ -244,7 +256,8 @@
         private System.Windows.Forms.Label mocSciana;
         private System.Windows.Forms.Label mocKlima;
         private System.Windows.Forms.Label mocPiec;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelLumeny;
+        private System.Windows.Forms.Button buttonGetTemp;
     }
 }
 
