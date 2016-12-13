@@ -15,17 +15,16 @@ namespace FuzzyLogic_Poprawiona
     public partial class Form1 : Form
     { 
         ArduinoData arduino;
-        Thread t;
         
         public Form1()
         {
             InitializeComponent();
             arduino = new ArduinoData();
-           
-            
+
+            timerTemperatury.Start();
             labelTempWnetrze.Text = Randomizer.GetRandomNumber(5, 30).ToString("#.00");
             labelTempDwor.Text = Randomizer.GetRandomNumber(-20, 40).ToString("#.00");
-            
+           
             
         }
 
@@ -43,8 +42,8 @@ namespace FuzzyLogic_Poprawiona
             mocPiec.Text = logika.pc.ToString();
             mocKlima.Text = logika.kl.ToString();
             mocSciana.Text = logika.wp.ToString();
-            label1.Text = arduino.Photoresistor().ToString();
-            ZmianaPoryDnia(arduino.Photoresistor());
+            labelLumeny.Text = arduino.Photoresistor();
+            ZmianaPoryDnia(Convert.ToInt16(arduino.Photoresistor()));
 
         }
         
@@ -121,8 +120,15 @@ namespace FuzzyLogic_Poprawiona
             
         }
 
-       
-
-      
+        private void buttonGetTemp_Click(object sender, EventArgs e)
+        {
+            timerTemperatury.Stop();
+            arduino.SendData("1");
+            arduino.Photoresistor();
+            labelTempDwor.Text = arduino.Photoresistor();
+            labelTempDwor.Text = labelTempDwor.Text.Replace("\r", "");
+            labelTempDwor.Text = labelTempDwor.Text.Replace(".", ",");
+            timerTemperatury.Start();
+        }
     }
 }

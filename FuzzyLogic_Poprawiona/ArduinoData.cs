@@ -17,21 +17,33 @@ namespace FuzzyLogic_Poprawiona
                 myPort = new SerialPort();
                 myPort.BaudRate = 9600;
                 myPort.PortName = "COM6"; //pod jakim com jest podlaczone trzeba sprawdzic        
-                myPort.Open();
+
+                myPort.Parity = Parity.None;
+                myPort.DataBits = 8;
+                myPort.StopBits = StopBits.One;
+
                 myPort.DtrEnable = true;
-            }catch(Exception ex)
+                myPort.Open();
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show("Connection problem");
             }
         }
 
-        public int Photoresistor()
+        public string Photoresistor()
         {
-            int data = Convert.ToInt16(myPort.ReadLine());
-
+            string data = myPort.ReadLine();
             return data;
         }
 
+        public void SendData(string message)
+        {
+            myPort.Write(message);
 
-}
+        }
+       
+
+
+    }
 }
