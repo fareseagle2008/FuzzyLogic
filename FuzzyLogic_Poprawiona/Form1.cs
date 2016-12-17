@@ -13,19 +13,22 @@ using System.Windows.Forms;
 namespace FuzzyLogic_Poprawiona
 {
     public partial class Form1 : Form
-    { 
-        ArduinoData arduino;
+    {
+        // ArduinoData arduino;
+        ChartForm formChart = new ChartForm();
         
         public Form1()
         {
             InitializeComponent();
-            arduino = new ArduinoData();
+           // arduino = new ArduinoData();
 
             timerTemperatury.Start();
             labelTempWnetrze.Text = Randomizer.GetRandomNumber(5, 30).ToString("#.00");
             labelTempDwor.Text = Randomizer.GetRandomNumber(-20, 40).ToString("#.00");
-           
-            
+            formChart.chartTemp.Series["Temp"].Points.Clear();
+            formChart.Show();
+            //chart.Series["Series1"].Points.Clear();
+
         }
 
        
@@ -42,11 +45,14 @@ namespace FuzzyLogic_Poprawiona
             mocPiec.Text = logika.pc.ToString();
             mocKlima.Text = logika.kl.ToString();
             mocSciana.Text = logika.wp.ToString();
-            labelLumeny.Text = arduino.Photoresistor();
-            ZmianaPoryDnia(Convert.ToInt16(arduino.Photoresistor()));
+            
+            formChart.chartTemp.Series["Temp"].Points.AddY(Convert.ToDouble(labelTempWnetrze.Text));
+
+            //labelLumeny.Text = arduino.Photoresistor();
+            // ZmianaPoryDnia(Convert.ToInt16(arduino.Photoresistor()));
 
         }
-        
+       
 
         public static bool oknoOtwarte = false;
         private void pictureBoxOkno_Click(object sender, EventArgs e)
@@ -123,11 +129,11 @@ namespace FuzzyLogic_Poprawiona
         private void buttonGetTemp_Click(object sender, EventArgs e)
         {
             timerTemperatury.Stop();
-            arduino.SendData("1");
-            arduino.Photoresistor();
-            labelTempDwor.Text = arduino.Photoresistor();
-            labelTempDwor.Text = labelTempDwor.Text.Replace("\r", "");
-            labelTempDwor.Text = labelTempDwor.Text.Replace(".", ",");
+            //arduino.SendData("1");
+            //arduino.Photoresistor();
+            //labelTempDwor.Text = arduino.Photoresistor();
+            //labelTempDwor.Text = labelTempDwor.Text.Replace("\r", "");
+            //labelTempDwor.Text = labelTempDwor.Text.Replace(".", ",");
             timerTemperatury.Start();
         }
     }
