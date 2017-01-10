@@ -21,8 +21,8 @@ namespace FuzzyLogic_Poprawiona
         {
             InitializeComponent();
             // arduino = new ArduinoData();
-            labelTempWnetrze.Text = Randomizer.GetRandomNumber(0, 40).ToString("0.#####");
-            labelTempDwor.Text = Randomizer.GetRandomNumber(0, 40).ToString("0.######");
+            labelTempWnetrze.Text = Randomizer.GetRandomNumber(-20, -20).ToString();
+            labelTempDwor.Text = Randomizer.GetRandomNumber(27, 27).ToString();
             timerTemperatury.Start();
             
             
@@ -40,14 +40,14 @@ namespace FuzzyLogic_Poprawiona
         {
 
             Logika logika = new Logika(Convert.ToDouble(labelTempWnetrze.Text), Convert.ToDouble(labelTempDwor.Text));
-            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + Logika.piecyk - Logika.klima + Logika.wplywNaTempWnetrza).ToString("#.######");
-            logika.OdswiezImg(pictureBoxKlima, pictureBoxPiecyk,pictureBox1,labelTempWnetrze);
+            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + logika.pc - logika.kl).ToString();
+            //logika.OdswiezImg(pictureBoxKlima, pictureBoxPiecyk,pictureBox1,labelTempWnetrze);
             
             
             formChart.chartTemp.Series["Temp"].Points.AddY(Convert.ToDouble(labelTempWnetrze.Text));
-            mocPiec.Text = Logika.piecyk.ToString("0.####");
-            mocKlima.Text = Logika.klima.ToString("0.####");
-            mocSciana.Text = Logika.wplywNaTempWnetrza.ToString();
+            mocPiec.Text = logika.pc.ToString("0.####");
+            mocKlima.Text = logika.kl.ToString("0.####");
+            mocSciana.Text = logika.wp.ToString();
             //labelLumeny.Text = arduino.Photoresistor();
             // ZmianaPoryDnia(Convert.ToInt16(arduino.Photoresistor()));
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FuzzyLogic_Poprawiona
 {
@@ -43,8 +44,7 @@ namespace FuzzyLogic_Poprawiona
             oknZamOptymalnie = OknZamOptymalnie;
             oknZamCieplo = OknZamCieplo;
             WypelnijMacierz();
-            Wyostrzenie();
-            //WypiszMacierz();
+            WypiszMacierz();
         }
 
         public void WypelnijMacierz()
@@ -194,8 +194,8 @@ namespace FuzzyLogic_Poprawiona
             klimaBrak[3] = macierz[0, 1];
             klimaBrak[4] = macierz[1, 1];
             klimaBrak[5] = macierz[0, 2];
-            //Logika.klima = (klimaMala.Max() * 1 + klimaSrednia.Max() * 2 + klimaDuza.Max() * 3) /
-            //                (klimaBrak.Max() + klimaMala.Max() + klimaSrednia.Max() + klimaDuza.Max());
+            double klima = (klimaMala.Max() * 1 + klimaSrednia.Max() * 2 + klimaDuza.Max() * 3) /
+                            (klimaBrak.Max() + klimaMala.Max() + klimaSrednia.Max() + klimaDuza.Max());
 
             piecykBrak[0] = macierz[4, 0];
             piecykBrak[1] = macierz[3, 1];
@@ -216,25 +216,25 @@ namespace FuzzyLogic_Poprawiona
             piecykDuze[1] = macierz[0, 0];
             piecykDuze[2] = macierz[0, 1];
 
-            //Logika.piecyk = (piecykMale.Max() * 1 + piecykSrednie.Max() * 2 + piecykDuze.Max() * 3) / (piecykBrak.Max() + piecykMale.Max() + piecykSrednie.Max() + piecykDuze.Max());
+            double piecyk = (piecykMale.Max() * 1 + piecykSrednie.Max() * 2 + piecykDuze.Max() * 3) / (piecykBrak.Max() + piecykMale.Max() + piecykSrednie.Max() + piecykDuze.Max());
+            //MessageBox.Show(piecyk.ToString());
+            //Console.WriteLine("KLIMA = " + klima);
+            //Console.WriteLine("PIECYK = " + piecyk);
+            //Console.WriteLine("Przykładowy wplyw na temperature: " + (piecyk - klima).ToString("#.##"));
+            //MessageBox.Show(macierz[0, 0].ToString() + "\t" + macierz[1, 0].ToString() + "\t" + macierz[2, 0].ToString() + "\t" + macierz[3, 0].ToString() + "\t" + macierz[4, 0].ToString() + "\n" +
+            //                macierz[0, 1].ToString() + "\t" + macierz[1, 1].ToString() + "\t" + macierz[2, 1].ToString() + "\t" + macierz[3, 1].ToString() + "\t" + macierz[4, 1].ToString() + "\n" +
+             //               macierz[0, 2].ToString() + "\t" + macierz[1, 2].ToString() + "\t" + macierz[2, 2].ToString() + "\t" + macierz[3, 2].ToString() + "\t" + macierz[4, 2].ToString());
         }
 
         public double PiecykWartosc()
         {
-            if ((piecykMale.Max() * 1 + piecykSrednie.Max() * 2 + piecykDuze.Max() * 3) == 0 || piecykBrak.Max() + piecykMale.Max() + piecykSrednie.Max() + piecykDuze.Max() == 0)
-                return 0;
-            else
-                return (piecykMale.Max() * 1 + piecykSrednie.Max() * 2 + piecykDuze.Max() * 3) / (piecykBrak.Max() + piecykMale.Max() + piecykSrednie.Max() + piecykDuze.Max());
+            return (piecykMale.Max() * 1 + piecykSrednie.Max() * 2 + piecykDuze.Max() * 3) / (piecykBrak.Max() + piecykMale.Max() + piecykSrednie.Max() + piecykDuze.Max());
         }
 
         public double KlimaWartosc()
         {
-            if ((klimaMala.Max() * 1 + klimaSrednia.Max() * 2 + klimaDuza.Max() * 3) == 0 || (klimaBrak.Max() + klimaMala.Max() + klimaSrednia.Max() + klimaDuza.Max() == 0))
-                return 0;
-            else
-                return (klimaMala.Max() * 1 + klimaSrednia.Max() * 2 + klimaDuza.Max() * 3) /
+            return (klimaMala.Max() * 1 + klimaSrednia.Max() * 2 + klimaDuza.Max() * 3) /
                             (klimaBrak.Max() + klimaMala.Max() + klimaSrednia.Max() + klimaDuza.Max());
         }
-
     }
 }

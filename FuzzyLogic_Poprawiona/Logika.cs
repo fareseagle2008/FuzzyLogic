@@ -14,13 +14,13 @@ namespace FuzzyLogic_Poprawiona
         double[] offsetDworOknoOt = new double[3];
         double[] offsetDworOknoZam = new double[3];
 
-        public static double piecyk = 0;
-        public static double klima = 0;
-        public static double wplywNaTempWnetrza = 0;
+        static double piecyk = 0;
+        static double klima = 0;
+        static int wplywNaTempWnetrza = 0;
 
         public double kl { get; set; }
         public double pc { get; set; }
-        public double wp { get; set; }
+        public int wp { get; set; }
         public Logika(double TemperaturaWnetrza, double TemperaturaDwor)
         {
             Najzimniej(TemperaturaWnetrza);
@@ -36,25 +36,13 @@ namespace FuzzyLogic_Poprawiona
             DworOknoOtZimno(TemperaturaDwor);
             DworOknoOtOptymalnie(TemperaturaDwor);
             DworOknoOtCieplo(TemperaturaDwor);
-            Macierz_regul macierz = new Macierz_regul(offsetWnetrze[0], offsetWnetrze[1], offsetWnetrze[2], offsetWnetrze[3], offsetWnetrze[4], offsetDworOknoZam[0], offsetDworOknoZam[1], offsetDworOknoZam[2]);
-            klima = macierz.KlimaWartosc();
-            piecyk = macierz.PiecykWartosc();
-
-            if (offsetDworOknoZam[0] > 0)
-            {
-                wplywNaTempWnetrza = -1;
-            }
-            else if (offsetDworOknoZam[1] > 0)
-            {
-                wplywNaTempWnetrza = 0;
-            }
-            else if (offsetDworOknoZam[2] > 0)
-            {
-                wplywNaTempWnetrza = 1;
-            }
-            //MessageBox.Show("Term wnetrza: " + offsetWnetrze[0] + "\n" + "Term wnetrza: " + offsetWnetrze[1] + "\n" + "Term wnetrza: " + offsetWnetrze[2] + "\n" + "Term wnetrza: " + offsetWnetrze[3] + "\n" + "Term wnetrza: " + offsetWnetrze[4] + "\n"
-            //    + "Term dworu: " + offsetDworOknoZam[0] + "\n" + "Term dworu: " + offsetDworOknoZam[1] + "\n" + "Term dworu: " + offsetDworOknoZam[2] + "\n");
-
+            //WypisanieTestowe();
+            Macierz_regul macierz = new Macierz_regul(offsetWnetrze[0], offsetWnetrze[1], offsetWnetrze[2], offsetWnetrze[3], offsetWnetrze[4],
+                offsetDworOknoZam[0], offsetDworOknoZam[1], offsetDworOknoZam[2]);
+            kl = macierz.KlimaWartosc();
+            pc = macierz.PiecykWartosc();
+            //MessageBox.Show("Piecyk: " + pc);
+            
         }
 
         #region termy_temp_wnetrza
@@ -89,17 +77,17 @@ namespace FuzzyLogic_Poprawiona
             {
                 offsetWnetrze[1] = 1;
             }
-            else if (temperatura >= 21 && temperatura <= 26)
+            else if (temperatura >= 21 && temperatura <= 24)
             {
-                offsetWnetrze[1] = (26 - temperatura) / (26 - 21);
+                offsetWnetrze[1] = (24 - temperatura) / (24 - 21);
             }
-            else if (temperatura > 26)
+            else if (temperatura >= 25)
             {
                 offsetWnetrze[1] = 0;
             }
         }
 
-        //od 23 do 29 med 25.5
+        //od 24 do 29 med 25.5
         public void Optymalnie(double temperatura)
         {
             if (temperatura < 23)
@@ -266,49 +254,38 @@ namespace FuzzyLogic_Poprawiona
         }
         #endregion
 
+
+        public void Wyostrzenie()
+        {
+
+        }
+        //ma być coś w stylu Najzimniej(tempWnetrza) && Zimno(TempDwor) -> Określenie poziomu klimatyzacji ze wzoru i określenie temp pieca
+
+       /* public void WypisanieTestowe()
+        {
+            for (int i = 0; i < offsetWnetrze.Length; i++)
+            {
+                Console.WriteLine("Term wnetrza: " + offsetWnetrze[i]);
+            }
+            for (int i = 0; i < offsetDworOknoZam.Length; i++)
+            {
+                Console.WriteLine("Term dworu okno zamnk: " + offsetDworOknoZam[i]);
+            }
+            for (int i = 0; i < offsetDworOknoOt.Length; i++)
+            {
+                Console.WriteLine("Term dworu okno ot: " + offsetDworOknoOt[i]);
+            }
+        }*/
+
+
         public double OdswiezTempPokoju()
         {
             pc = piecyk;
             kl = klima;
             wp = wplywNaTempWnetrza;
-            return piecyk - klima + wplywNaTempWnetrza;
+            return piecyk + klima + wplywNaTempWnetrza;
         }
 
-        public void OdswiezImg(PictureBox klimapicture, PictureBox piecpicture,PictureBox typ, Label tempWew)
-        {
-          if(klima < 0)
-            {
-                klimapicture.Image = Properties.Resources.klima_on;
-                klimapicture.Invalidate();
-            }else if(klima == 0)
-            {
-                klimapicture.Image = Properties.Resources.klima_on;
-                klimapicture.Invalidate();
-            }
-           if (piecyk == 0)
-            {
-                piecpicture.Image = Properties.Resources.piec_off;
-                klimapicture.Invalidate();
-            }else if (piecyk > 0)
-            {
-                piecpicture.Image = Properties.Resources.fire;
-                klimapicture.Invalidate();
-            }
-
-            if (Double.Parse(tempWew.Text) < 22)
-            {
-                typ.Image = Properties.Resources.typek_cold;
-                typ.Invalidate();
-            }else if ((Double.Parse(tempWew.Text) >= 24) && (Double.Parse(tempWew.Text) <= 28))
-            {
-                typ.Image = Properties.Resources.typek_norm;
-                typ.Invalidate();
-            }else if (Double.Parse(tempWew.Text) > 29)
-            {
-                typ.Image = Properties.Resources.typek_warm;
-                typ.Invalidate();
-            }
-
-        }
     }
 }
+
