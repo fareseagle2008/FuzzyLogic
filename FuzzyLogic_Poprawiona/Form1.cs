@@ -16,38 +16,38 @@ namespace FuzzyLogic_Poprawiona
     {
         // ArduinoData arduino;
         ChartForm formChart = new ChartForm();
-        
+        //double temp = Randomizer.GetRandomNumber(5, 35);
         public Form1()
         {
             InitializeComponent();
-           // arduino = new ArduinoData();
-
+            // arduino = new ArduinoData();
+            labelTempWnetrze.Text = Randomizer.GetRandomNumber(0, 40).ToString("0.#####");
+            labelTempDwor.Text = Randomizer.GetRandomNumber(0, 40).ToString("0.######");
             timerTemperatury.Start();
-            labelTempWnetrze.Text = Randomizer.GetRandomNumber(5, 30).ToString("#.00");
-            labelTempDwor.Text = Randomizer.GetRandomNumber(-20, 40).ToString("#.00");
+            
+            
             formChart.chartTemp.Series["Temp"].Points.Clear();
             formChart.Show();
             //chart.Series["Series1"].Points.Clear();
 
         }
 
-       
 
-        
 
+
+        double temp = 0;
         private void timerTemperatury_Tick(object sender, EventArgs e)
         {
-             
+
             Logika logika = new Logika(Convert.ToDouble(labelTempWnetrze.Text), Convert.ToDouble(labelTempDwor.Text));
-            logika.Reguly();
+            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + Logika.piecyk - Logika.klima + Logika.wplywNaTempWnetrza).ToString("#.######");
             logika.OdswiezImg(pictureBoxKlima, pictureBoxPiecyk,pictureBox1,labelTempWnetrze);
-            labelTempWnetrze.Text = (Convert.ToDouble(labelTempWnetrze.Text) + logika.OdswiezTempPokoju()).ToString("#.00");
-            mocPiec.Text = logika.pc.ToString();
-            mocKlima.Text = logika.kl.ToString();
-            mocSciana.Text = logika.wp.ToString();
+            
             
             formChart.chartTemp.Series["Temp"].Points.AddY(Convert.ToDouble(labelTempWnetrze.Text));
-
+            mocPiec.Text = Logika.piecyk.ToString("0.####");
+            mocKlima.Text = Logika.klima.ToString("0.####");
+            mocSciana.Text = Logika.wplywNaTempWnetrza.ToString();
             //labelLumeny.Text = arduino.Photoresistor();
             // ZmianaPoryDnia(Convert.ToInt16(arduino.Photoresistor()));
 

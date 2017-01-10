@@ -67,6 +67,7 @@
       <DependentUpon>FormaRandomizujaca.cs</DependentUpon>
     </Compile>
     <Compile Include="Logika.cs" />
+    <Compile Include="Macierz_regul.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Randomizer.cs" />
