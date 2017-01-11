@@ -8,3 +8,15 @@ C:\Users\Janek\Documents\Visual Studio 2015\Projects\FuzzyLogic_poprawiona\Fuzzy
 C:\Users\Janek\Documents\Visual Studio 2015\Projects\FuzzyLogic_poprawiona\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csproj.GenerateResource.Cache
 C:\Users\Janek\Documents\Visual Studio 2015\Projects\FuzzyLogic_poprawiona\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.exe
 C:\Users\Janek\Documents\Visual Studio 2015\Projects\FuzzyLogic_poprawiona\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Janek\Documents\Visual Studio 2015\Projects\FuzzyLogic_poprawiona\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.ChartForm.resources
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe.config
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csprojResolveAssemblyReference.cache
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.ChartForm.resources
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Form1.resources
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.FormaRandomizujaca.resources
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Properties.Resources.resources
+C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csproj.GenerateResource.Cache
