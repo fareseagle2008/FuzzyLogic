@@ -259,6 +259,11 @@ namespace FuzzyLogic_Poprawiona
         {
 
         }
+        //dodanie klasy od erniego
+        public void ErniKlasa()
+        {
+
+        }
         //ma być coś w stylu Najzimniej(tempWnetrza) && Zimno(TempDwor) -> Określenie poziomu klimatyzacji ze wzoru i określenie temp pieca
 
        /* public void WypisanieTestowe()

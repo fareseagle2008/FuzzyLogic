@@ -20,3 +20,25 @@ C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Cop
 C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.FormaRandomizujaca.resources
 C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Properties.Resources.resources
 C:\Users\Kusio\Documents\Visual Studio 2015\Projects\FuzzyLogic_Poprawiona - Copy\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csproj.GenerateResource.Cache
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe.config
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csprojResolveAssemblyReference.cache
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.ChartForm.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Form1.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.FormaRandomizujaca.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Properties.Resources.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-master\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csproj.GenerateResource.Cache
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe.config
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.exe
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\bin\Debug\FuzzyLogic_Poprawiona.pdb
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csprojResolveAssemblyReference.cache
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.ChartForm.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Form1.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.FormaRandomizujaca.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.Properties.Resources.resources
+C:\Users\Ernest\Downloads\FuzzyLogic-erni\FuzzyLogic_Poprawiona\obj\Debug\FuzzyLogic_Poprawiona.csproj.GenerateResource.Cache
