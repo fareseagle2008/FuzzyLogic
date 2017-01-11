@@ -259,8 +259,8 @@ namespace FuzzyLogic_Poprawiona
         {
 
         }
-        //dodanie bardzo waznej klasy
-        public void WaznaKlasa()
+        //dodanie klasy od erniego
+        public void ErniKlasa()
         {
 
         }
